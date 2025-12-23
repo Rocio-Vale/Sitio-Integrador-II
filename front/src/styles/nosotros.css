@@ -1,0 +1,86 @@
+
+.titulo {
+    text-align: center;
+    color: #202020;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #555555;
+    margin: 30px;
+}
+
+.titulo h2 {
+    margin: 50px auto;
+}
+
+.nos .titulo p {
+    font-size: x-large;
+}
+
+.col {
+    display: flex;
+}
+
+.col .caja {
+    text-align: center;
+    margin: 30px;
+}
+
+.col .caja i {
+    font-size: 50px;
+    color: #041E42;
+}
+
+.col .caja h3 {
+    margin: 10px;
+    color: #F7A01D;
+    font-size: 30px;
+}
+
+.col .caja p {
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+
+.personas {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.persona {
+    margin: 20px;
+    padding: 10px;
+    max-width: 200px;
+    background-color: #041E42;
+    text-align: center;
+    box-shadow: -15px -15px 0px 0px rgba(31, 31, 31, 0.75);
+}
+
+.persona img {
+    box-shadow: 15px 15px 0px 0px rgba(247, 160, 29, 1);
+}
+
+.persona h4 {
+    color: #cfd0d1;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin: 20px 0 0 0;
+}
+
+.persona h5 {
+    color: #FFDE59;
+    font-weight: lighter;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    letter-spacing: 1px;
+    margin: 10px;
+}
+
+.persona p {
+    color: #cfd0d1;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-style: italic;
+}

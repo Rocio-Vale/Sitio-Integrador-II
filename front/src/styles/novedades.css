@@ -1,0 +1,38 @@
+
+.nov .novedad {
+    border: 1px solid #021125;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: #021125;
+    color: #ffffff;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nov .novedad h4,
+.nov .novedad p {
+    font-weight: lighter;
+    letter-spacing: 1px;
+    padding: 5px auto;
+}
+
+.nov .novedad p {
+    font-size: 13px;
+}
+
+.novedad .producto {
+    width: 200px;
+}
+
+.novedad .producto h4 {
+    text-align: center;
+    margin: 10px auto;
+}
+
+.novedad .producto img {
+    display: block;
+    margin: 0 auto;
+}
