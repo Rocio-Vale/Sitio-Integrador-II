@@ -1,0 +1,22 @@
+<div class=" holder holder-cont">
+    <div class="cont">
+        <div class="titulo">
+            <h2>LOGIN</h2>
+        </div>
+        <div>
+            <div class="formulario">
+                <form action="/admin/login" method="post">
+                    <input type="text" class="" id="inputUser" placeholder="Usuario" name="usuario">
+                    <input type="password" class="" id="inputPassword" placeholder="Contraseña" name="password">
+                    <div class="boton">
+                        <button type="submit" class="">Ingresar</button>
+                    </div>
+                </form>
+            </div>
+
+            {{#if error}}
+            <p class="msj">El usuario o contraseña son incorrectos</p>
+            {{/if}}
+        </div>
+    </div>
+</div>

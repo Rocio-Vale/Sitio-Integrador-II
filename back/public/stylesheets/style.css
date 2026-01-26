@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+/* font-family: "Alfa Slab One", serif*/
+/* font-family: "Inria Sans", sans-serif; */
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.body {
+  background-color: #dadada;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* ------------------ header  */
+
+header {
+  background-color: #041E42;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  margin-left: 15px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+}
+
+nav ul li {
+  flex-grow: 1;
+}
+
+nav ul li a {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  padding: 3px 15px;
+  margin: 5px;
+  text-align: center;
+}
+
+nav ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #ffa502;
+  border-top: 1px solid #FFDE59;
+}
+
+nav ul li a.activo {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #ffa502;
+}
+
+/* ----------------- fin header */
+
+
+.titulo {
+  text-align: center;
+  color: #202020;
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: lighter;
+  color: #555555;
+  margin: 30px;
+}
+
+
+.titulo h2 {
+  margin: 50px auto;
+}
+
+.holder {
+  max-width: 1024px;
+  font-family: "Inria Sans", sans-serif;
+  flex: 1;
+}
+
+.holder * {
+  margin: 0;
+}
+
+footer {
+  background-color: #000000;
+  color: white;
+
+  padding: 20px;
+  text-align: center;
+}
