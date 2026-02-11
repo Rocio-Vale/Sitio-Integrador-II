@@ -6,4 +6,10 @@ router.get('/', function(req, res, next) {
   res.redirect('admin/login');
 });
 
+
+router.get('/admin', function(req, res, next) {
+  res.redirect('admin/login');
+});
+
+
 module.exports = router;

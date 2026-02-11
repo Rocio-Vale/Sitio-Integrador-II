@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="contenedor-novedades bg-white rounded-4 overflow-hidden mb-5">
+        <div class="header-novedades d-flex align-items-center justify-content-center p-4">
+            <div class="contenedor-titulo">
+                <h3 class="h3 mb-1 text-center flex-grow-1 ">Nueva Novedad</h3>
+            </div>
+        </div>
+
+        <div class="p-4 p-md-5">
+            <form action="/admin/novedades/agregar" method="post" class="row g-4">
+                <div class=" d-flex flex-column">
+
+                    {{#if error}}
+                    <div class="alert alert-danger mt-4 d-flex align-items-center rounded-3">
+                        <i class="fas fa-exclamation-circle me-2"></i>
+                        <div>{{message}}</div>
+                    </div>
+                    {{/if}}
+
+                    <div class="col-12 mb-4">
+                        <label class="form-label fw-bold text-dark ">Título</label>
+                        <input type="text" class="form-control ps-3" id="titulo-novedad"
+                            placeholder="Ej: Incorporación de nuevas tecnologías" name="titulo">
+                    </div>
+
+                    <div class="col-12 mb-4">
+                        <label class="form-label fw-bold text-dark ">Descripción</label>
+                        <textarea class="form-control" id="descripcion-novedad"
+                            placeholder="Escribe el detalle de la novedad aquí..." name="descripcion"
+                            rows="4"></textarea>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <label class="form-label fw-bold d-block text-dark">Categoría</label>
+                        <div class="d-flex gap-3">
+
+                            <div class="flex-fill">
+                                <input type="radio" class="btn-check" name="tipo" id="tipo1" value="lanzamiento">
+                                <label class="btn btn-outline-secondary w-100 py-2" id="tipo-lanzamiento" for="tipo1">
+                                    <i class="fas fa-rocket me-2"></i>Lanzamiento
+                                </label>
+                            </div>
+                            <div class="flex-fill">
+                                <input type="radio" class="btn-check" name="tipo" id="tipo2" value="proyecto">
+                                <label class="btn btn-outline-secondary w-100 py-2" for="tipo2">
+                                    <i class="fas fa-briefcase me-2"></i>Proyecto
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4">
+                        <label for="fecha_publicacion" class="form-label fw-bold text-dark">Fecha de Publicación</label>
+                        <div class="input-group ">
+                            <span class="input-group-text bg-light border-end-0 contenedor-icono"><i class="far fa-calendar-alt text-muted 
+                                    "></i></span>
+                            <input type="date" class="form-control border-start-0 ps-0" id="fecha_publicacion"
+                                name="fecha_publicacion">
+                        </div>
+                    </div>
+
+                    <div class="col-12 mb-4">
+                        <label class="form-label fw-bold text-dark">Imagen de portada</label>
+                        <div class="input-group">
+                            <span class="input-group-text bg-light border-end-0 contenedor-icono"><i
+                                    class="fas fa-image text-muted"></i></span>
+                            <input type="text" class="form-control border-start-0 ps-0"
+                                placeholder="URL de la imagen - deshabilitado" name="imagen_url" disabled>
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="col-12 d-flex flex-column-reverse flex-sm-row justify-content-end align-items-center gap-3 pt-4 border-top mt-5">
+                        <a href="/admin/novedades" class="boton-cancelar">Cancelar</a>
+                        <button type="submit" class="boton px-4 border-0 shadow-sm">
+                            <i class="fas fa-save me-2"></i>Guardar</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+
+
+        </div>
+    </div>
+</div>

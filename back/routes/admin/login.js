@@ -5,7 +5,7 @@ var usuarioModel = require('./../../models/usuariosModel');
 router.get('/', function (req, res, next) {
     res.render('admin/login',
         {
-            layout: 'admin/layout',
+            layout: 'admin/layoutLogin',
             title: 'Marusst'
         });
 });
@@ -17,6 +17,7 @@ router.post('/', async (req, res, next) => {
 
         var data = await usuarioModel.getUserByUsernameAndPassword(usuario, password);
 
+
         if (data != undefined) {
             req.session.id_usuario = data.id;
             req.session.nombre = data.usuario;
@@ -24,7 +25,7 @@ router.post('/', async (req, res, next) => {
             res.redirect('/admin/novedades');
         } else {
             res.render('admin/login', {
-                layout: 'admin/layout',
+                layout: 'admin/layoutLogin',
                 error: true
             });
         }
@@ -36,7 +37,7 @@ router.post('/', async (req, res, next) => {
 router.get('/logout', function (req, res, next) {
     req.session.destroy();
     res.render('admin/login', {
-        layout: 'admin/layout'
+        layout: 'admin/layoutLogin'
     });
 });
 

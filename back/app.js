@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var session = require('express-session');
+var hbs = require('hbs');
 
 require('dotenv').config();
 
@@ -18,13 +19,28 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+hbs.registerHelper('ifCond', function (v1, operator, v2, options) {
+    switch (operator) {
+        case '==':
+            return (v1 == v2) ? options.fn(this) : options.inverse(this);
+        default:
+            return options.inverse(this);
+    }
+});
+
+hbs.registerHelper('formatDate', function(date) {
+    if (!date) return "";
+    let d = new Date(date);
+    return d.toISOString().split('T')[0];
+});
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// sesion
+// sesión
 app.use(session({
   secret: 'g8A5U8dtzl9PGf6Y2g1O',
   resave: false,
@@ -33,7 +49,7 @@ app.use(session({
 
 secured = async (req, res, next) => {
   try {
-    console.log(req.session.id_usuario);
+    // console.log(req.session.id_usuario);
 
     if (req.session.id_usuario) {
       next();
@@ -51,6 +67,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/novedades', secured, novedadesRouter);
+// app.use('/admin/novedades', novedadesRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

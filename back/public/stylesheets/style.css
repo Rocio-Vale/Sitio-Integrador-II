@@ -3,97 +3,82 @@
 /* font-family: "Alfa Slab One", serif*/
 /* font-family: "Inria Sans", sans-serif; */
 
-
-html, body {
-    height: 100%;
-    margin: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.body {
-  background-color: #dadada;
+body {
+  background: linear-gradient(135deg, #041E42 0%, #1a3a63 100%);
+  font-family: 'Inria Sans', sans-serif;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  min-width: 320px;
+  color: #333;
 }
 
-
-/* ------------------ header  */
-
-header {
+/* --- Header Admin --- */
+.header-admin {
   background-color: #041E42;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-bottom: 1px solid #cc7a00;
 }
 
-header img {
+.contenedor-logo img {
   margin-left: 15px;
+  width: 50px;
+  height: 50px;
 }
 
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 10px;
-  display: flex;
+.contenedor-texto-logo h3 {
+  display: inline-block;
+  font-family: "Alfa Slab One", serif;
+  color: #c5c5c5;
+  letter-spacing: 3px;
 }
 
-nav ul li {
-  flex-grow: 1;
-}
-
-nav ul li a {
-  font-family: "Inria Sans", sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  color: white;
-  text-decoration: none;
-  padding: 3px 15px;
-  margin: 5px;
-  text-align: center;
-}
-
-nav ul li a:hover {
-  background-color: rgba(0, 0, 0, 0.3);
-  color: #ffa502;
-  border-top: 1px solid #FFDE59;
-}
-
-nav ul li a.activo {
-  background-color: rgba(0, 0, 0, 0.3);
-  color: #ffa502;
-}
-
-/* ----------------- fin header */
-
-
-.titulo {
-  text-align: center;
-  color: #202020;
+.contenedor-texto-logo span {
+  color: #f89c22;
+  font-weight: 700;
   letter-spacing: 2px;
-  font-size: 15px;
-  font-weight: lighter;
-  color: #555555;
-  margin: 30px;
+  font-family: 'Inria Sans', sans-serif;
+  font-size: small;
+  /* color: #ffa502; */
+}
+
+.contenedor-usuario span {
+  font-size: 16px;
+}
+
+.contenedor-usuario strong {
+  letter-spacing: 1px;
+  text-transform: capitalize;
 }
 
 
-.titulo h2 {
-  margin: 50px auto;
+.contenedor-usuario a {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 20px;
+  padding: 5px 15px;
+  transition: all 0.3s;
 }
 
-.holder {
-  max-width: 1024px;
-  font-family: "Inria Sans", sans-serif;
-  flex: 1;
+.contenedor-usuario a:hover {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
 }
 
-.holder * {
-  margin: 0;
-}
+
+
+
+/* --- Footer --- */
 
 footer {
-  background-color: #000000;
-  color: white;
-
-  padding: 20px;
-  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #c5c5c5;
 }

@@ -1,0 +1,206 @@
+.contenedor-novedades {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 1px solid rgba(100, 100, 100, 0.5);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8) !important;
+}
+
+.header-novedades {
+    background: linear-gradient(rgba(4, 30, 66, 0.7), rgba(4, 30, 66, 0.7)), url('../images/fondo-header.png') no-repeat center center;
+    background-size: cover;
+    border-bottom: 2px solid #eee;
+    /* height: 120px; */
+
+}
+
+.contenedor-titulo {
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    padding: 5px;
+}
+
+
+.header-novedades h3 {
+    /* font-family: "Alfa Slab One", serif; */
+    color: #ffffff;
+    text-shadow: 0 0 20px rgb(0, 0, 0) !important;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    margin: 0;
+}
+
+
+.tabla {
+    border-spacing: 0 10px;
+}
+
+.tabla thead th {
+    background-color: #f8f9fa;
+    color: #041E42;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 10px;
+    border-bottom: 1px solid #eee !important;
+    border: none;
+}
+
+.tabla tbody tr td {
+    transition: all 0.5s ease;
+    /* background-color: #fff; */
+}
+
+
+.tabla tbody tr:hover td {
+    background-color: #fcfcfc !important;
+
+}
+
+.tabla tbody td {
+    padding: 20px 10px;
+    border-bottom: 1px solid #cc7a00;
+
+}
+
+.novedad-titulo {
+    font-weight: 500;
+    color: #041E42 !important;
+    font-size: 16px;
+}
+
+.contenedor-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #041E42;
+}
+
+
+.contenedor-tipo {
+    background-color: #e9ecef;
+    color: #6c757d;
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border-radius: 50px;
+}
+
+
+.contenedor-fecha {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.contenedor-boton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.boton {
+    background-color: #cc7a00;
+    color: white;
+    font-size: 16px;
+    padding: 10px 25px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    text-decoration: none !important;
+    height: 45px;
+}
+
+.boton:hover {
+    background-color: #e68a00;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(204, 122, 0, 0.3);
+}
+
+.boton-cancelar {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border: 1px solid #dee2e6;
+    font-size: 16px;
+    padding: 10px 25px;
+    border-radius: 15px;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+}
+
+.boton-cancelar:hover {
+    background-color: #e9ecef;
+    color: #282c30;
+    border-color: #ced4da;
+}
+
+.form-check-inline {
+    margin-right: 0;
+}
+
+.msj-error {
+    background-color: #ffeeee;
+    color: #aa1b11;
+    padding: 10px;
+    /* border-radius: 4px; */
+    font-size: small;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid #fcc9c9;
+}
+
+form textarea,
+form input {
+    border-color: #cc7a00 !important;
+}
+
+form input {
+    padding-left: 10px;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+#descripcion-novedad:focus,
+#titulo-novedad:focus {
+    border-color: #9c5e01 !important;
+    box-shadow: 0 0 0 0.25rem rgba(204, 122, 0, 0.2) !important;
+}
+
+.input-group-text {
+    background-color: #f8f9fa;
+    color: #6c757d;
+}
+
+.btn-outline-secondary {
+    color: #041E42;
+    background-color: #fff;
+    font-weight: 500;
+}
+
+.btn-check:checked+.btn-outline-secondary {
+    background-color: #243246 !important;
+    border-color: white;
+    color: white;
+}
+
+.contenedor-icono {
+    border-bottom: 1px solid #cc7a00 !important;
+    border-top: 1px solid #cc7a00 !important;
+    border-left: 1px solid #cc7a00 !important;
+}
