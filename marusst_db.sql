@@ -41,10 +41,10 @@ CREATE TABLE `novedades` (
 LOCK TABLES `novedades` WRITE;
 /*!40000 ALTER TABLE `novedades` DISABLE KEYS */;
 INSERT INTO `novedades` VALUES
-(1,'prueba 1','prueba 1','lanzamiento','2026-02-02',NULL),
-(2,'Implementación de Impresión 3D en Acero Inoxidable para Repuestos Críticos.','Hemos incorporado la tecnología de sintetizado láser de metal (DMLS) a nuestro catálogo. Ahora podemos fabricar piezas industriales de alta complejidad con una resistencia mecánica superior, reduciendo los tiempos de espera de 4 semanas a solo 48 horas para nuestros clientes del sector minero.','lanzamiento','2026-02-03',NULL),
-(3,'Finalización del Diseño Estructural para Planta de Procesamiento Bioquímico.','Concluimos con éxito la fase de ingeniería de detalle e infraestructura para la nueva planta de \"BioTech Solutions\". El proyecto incluyó el diseño de naves industriales, sistemas de tuberías certificados y la optimización de flujos de trabajo para maximizar la eficiencia operativa en un 20%.','proyecto','2026-02-05',NULL),
-(4,'Auditoría de Eficiencia Energética en Plantas Automotrices.','Iniciamos un nuevo ciclo de consultoría especializada orientado a la reducción de la huella de carbono. A través de simulaciones digitales y análisis de datos en tiempo real, ayudamos a nuestros socios a rediseñar sus líneas de montaje para un consumo energético sustentable sin sacrificar la productividad.','proyecto','2026-02-06',NULL);
+(1,'Implementación de Impresión 3D en Acero Inoxidable para Repuestos Críticos.','Hemos incorporado la tecnología de sintetizado láser de metal (DMLS) a nuestro catálogo. Ahora podemos fabricar piezas industriales de alta complejidad con una resistencia mecánica superior, reduciendo los tiempos de espera de 4 semanas a solo 48 horas para nuestros clientes del sector minero.','lanzamiento','2026-02-03','pzrqavydduhelnsrtr7v'),
+(2,'Finalización del Diseño Estructural para Planta de Procesamiento Bioquímico.','Concluimos con éxito la fase de ingeniería de detalle e infraestructura para la nueva planta de \"BioTech Solutions\". El proyecto incluyó el diseño de naves industriales, sistemas de tuberías certificados y la optimización de flujos de trabajo para maximizar la eficiencia operativa en un 20%.\r\n','proyecto','2026-02-05','abe7u4u8x1znmxzizbrt'),
+(3,'Auditoría de Eficiencia Energética en Plantas Automotrices.','Iniciamos un nuevo ciclo de consultoría especializada orientado a la reducción de la huella de carbono. A través de simulaciones digitales y análisis de datos en tiempo real, ayudamos a nuestros socios a rediseñar sus líneas de montaje para un consumo energético sustentable sin sacrificar la productividad.','lanzamiento','2026-02-07','semutn30m18vwwpigtgm'),
+(4,'prueba-sin-imagen','prueba-sin-imagen','lanzamiento','2026-02-15',NULL);
 /*!40000 ALTER TABLE `novedades` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -88,4 +88,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*M!100616 SET NOTE_VERBOSITY=@OLD_NOTE_VERBOSITY */;
 
--- Dump completed on 2026-02-11 16:10:54
+-- Dump completed on 2026-02-15 20:56:30

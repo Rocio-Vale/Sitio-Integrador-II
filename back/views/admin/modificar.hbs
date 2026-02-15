@@ -6,8 +6,8 @@
             </div>
         </div>
 
-        <div class="p-4 p-md-5">
-            <form action="/admin/novedades/modificar" method="post" class="row g-4">
+        <div class="p-4 p-md-5 modificar-nov">
+            <form action="/admin/novedades/modificar" method="post" enctype="multipart/form-data" class="row g-4">
                 <div class=" d-flex flex-column">
                     {{#if error}}
                     <div class="alert alert-danger mt-4 d-flex align-items-center rounded-3">
@@ -50,8 +50,6 @@
                         </div>
                     </div>
 
-
-
                     <div class="col-md-6 mb-4">
                         <label for="fecha_publicacion" class="form-label fw-bold text-dark">Fecha de Publicación</label>
                         <div class="input-group">
@@ -65,24 +63,75 @@
 
                     <div class="col-12 mb-4">
                         <label class="form-label fw-bold text-dark">Imagen de portada</label>
-                        <div class="input-group">
-                            <span class="input-group-text bg-light border-end-0 contenedor-icono">
-                                <i class="fas fa-image text-muted"></i>
-                            </span>
-                            <input type="text" class="form-control border-start-0 ps-0"
-                                placeholder="URL de la imagen - deshabiltiado" name="imagen_url"
-                                value="{{novedad.imagen_url}}" disabled>
+                        <div class="contenedor-img-upload">
+                            <input type="file" name="imagen_url" id="imagen_url" accept="image/*" class="input-oculto"
+                                required>
+                            <label for="imagen_url" class="contenedor-label-upload" id="label-imagen">
+                                <div class="contenido-upload">
+                                    <span class="texto-upload" id="texto-upload-exito">¡Nueva imagen
+                                        seleccionada!</span>
+                                    <div class="icono-upload">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </div>
+                                    <span class="texto-upload">Haz clic para reemplazar la imagen actual</span>
+                                </div>
+                            </label>
                         </div>
-                    </div>
 
-                    <div
-                        class="col-12 d-flex flex-column-reverse flex-sm-row justify-content-end align-items-center gap-3 pt-4 border-top mt-5">
-                        <a href="/admin/novedades" class="boton-cancelar">Cancelar</a>
-                        <button type="submit" class="boton px-4 border-0 shadow-sm">
-                            <i class="fas fa-save me-2"></i>Guardar cambios
-                        </button>
+                        {{#if novedad.imagen_url}}
+                        <div
+                            class="mt-3 p-3 border rounded-3 bg-light d-flex align-items-center justify-content-between">
+                            <div class="form-check">
+                                <input class="form-check-input mt-2 p-2" type="checkbox" name="borrar_img"
+                                    id="borrar_img" value="1">
+
+                                <label
+                                    class="form-check-label small fw-bold text-danger d-flex align-items-center rounded border border-danger-subtle text-uppercase px-2 py-1"
+                                    for="borrar_img"> Guardar sin imagen
+                                </label>
+
+                                <label
+                                    class="form-check-label d-inline-flex align-items-center bg-light-danger px-0 py-1 "
+                                    for="borrar_img">
+                                    <i class="fa-solid fa-circle-exclamation text-danger me-2"></i>
+                                    <span class="small fw-bold text-danger" style="letter-spacing: 0.5px;">
+                                        Se eliminará la imagen actual
+                                    </span>
+                                </label>
+
+                                <input type="hidden" name="img_original" value="{{novedad.imagen_url}}">
+                            </div>
+                        </div>
+                        {{/if}}
                     </div>
                 </div>
-            </form>
+
+                <div
+                    class="col-12 d-flex flex-column-reverse flex-sm-row justify-content-end align-items-center gap-3 pt-4 border-top mt-5">
+                    <a href="/admin/novedades" class="boton-cancelar">Cancelar</a>
+                    <button type="submit" class="boton px-4 border-0 shadow-sm">
+                        <i class="fas fa-save me-2"></i>Guardar cambios
+                    </button>
+                </div>
         </div>
+        </form>
     </div>
+</div>
+
+<script>
+    const checkboxBorrar = document.getElementById('borrar_img');
+    const inputImagen = document.getElementById('imagen_url');
+    const labelImagen = document.getElementById('label-imagen');
+
+    checkboxBorrar.addEventListener('change', function () {
+        if (this.checked) {
+            inputImagen.required = false;
+            inputImagen.disabled = true;
+            inputImagen.value = "1";
+
+        } else {
+            inputImagen.required = true;
+            inputImagen.disabled = false;
+        }
+    });
+</script>

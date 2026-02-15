@@ -21,7 +21,6 @@
     padding: 5px;
 }
 
-
 .header-novedades h3 {
     /* font-family: "Alfa Slab One", serif; */
     color: #ffffff;
@@ -30,7 +29,6 @@
     font-weight: lighter;
     margin: 0;
 }
-
 
 .tabla {
     border-spacing: 0 10px;
@@ -53,16 +51,17 @@
     /* background-color: #fff; */
 }
 
-
 .tabla tbody tr:hover td {
     background-color: #fcfcfc !important;
-
 }
 
 .tabla tbody td {
     padding: 20px 10px;
     border-bottom: 1px solid #cc7a00;
+}
 
+.tabla td {
+    vertical-align: middle;
 }
 
 .novedad-titulo {
@@ -72,8 +71,8 @@
 }
 
 .contenedor-img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 8px;
     overflow: hidden;
     display: flex;
@@ -81,7 +80,6 @@
     justify-content: center;
     border: 1px solid #041E42;
 }
-
 
 .contenedor-tipo {
     background-color: #e9ecef;
@@ -93,7 +91,6 @@
     border-radius: 50px;
 }
 
-
 .contenedor-fecha {
     font-size: 0.85rem;
     color: #6c757d;
@@ -103,7 +100,6 @@
     display: flex;
     justify-content: flex-end;
 }
-
 
 .boton {
     background-color: #cc7a00;
@@ -203,4 +199,128 @@ form input {
     border-bottom: 1px solid #cc7a00 !important;
     border-top: 1px solid #cc7a00 !important;
     border-left: 1px solid #cc7a00 !important;
+}
+
+.contenedor-upload-img {
+    position: relative;
+    width: 100%;
+}
+
+.input-oculto {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+    z-index: -1;
+}
+
+.contenedor-label-upload {
+    display: block;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    border: 2px dashed #cc7a00;
+    border-radius: 15px;
+    background-color: #fffaf2;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.contenedor-label-upload:hover {
+    background-color: #fef4e6;
+    border-color: #9c5e01;
+    transform: translateY(-2px);
+}
+
+#texto-upload-exito {
+    display: none;
+    margin: 10px;
+}
+
+.contenido-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.icono-upload {
+    width: 60px;
+    height: 60px;
+    background-color: #041E42;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.texto-upload {
+    font-weight: 700;
+    color: #041E42;
+    font-size: 18px;
+}
+
+.preview-mini-img img {
+    border: 2px solid #cc7a00;
+    transition: transform 0.3s ease;
+}
+
+.preview-mini-img img:hover {
+    transform: scale(1.1);
+}
+
+.input-oculto:focus+.contenedor-label-upload,
+.input-oculto:active+.contenedor-label-upload {
+    border-color: #9c5e01;
+}
+
+.form-check-input:checked {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.agregar-nov .input-oculto.has-file+.contenedor-label-upload {
+    border: 2px solid #28a745;
+    background-color: #f0fff4;
+}
+
+.agregar-nov .input-oculto.has-file+.contenedor-label-upload .icono-upload {
+    background-color: #28a745;
+    transform: scale(1.1);
+}
+
+.agregar-nov .input-oculto.has-file+.contenedor-label-upload .texto-upload {
+    color: #155724;
+    font-weight: lighter;
+}
+
+.agregar-nov .input-oculto.has-file+.contenedor-label-upload #texto-upload-exito {
+    display: block;
+    color: #155724;
+    font-weight: 700;
+}
+
+.modificar-nov .input-oculto:valid+.contenedor-label-upload {
+    border: 2px solid #28a745;
+    background-color: #f0fff4;
+}
+
+.modificar-nov .input-oculto:valid+.contenedor-label-upload .icono-upload {
+    background-color: #28a745;
+    transform: scale(1.1);
+}
+
+.modificar-nov .input-oculto:valid+.contenedor-label-upload .texto-upload {
+    color: #155724;
+    font-weight: lighter;
+}
+
+.modificar-nov .input-oculto:valid+.contenedor-label-upload #texto-upload-exito {
+    display: block;
+    color: #155724;
+    font-weight: 700;
 }

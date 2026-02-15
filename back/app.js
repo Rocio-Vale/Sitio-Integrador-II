@@ -1,17 +1,22 @@
+require('dotenv').config();
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
 var session = require('express-session');
 var hbs = require('hbs');
-
-require('dotenv').config();
+var fileUpload = require('express-fileupload');
+var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');
 var novedadesRouter = require('./routes/admin/novedades');
+
+var apiRouter = require('./routes/api.js');
 
 var app = express();
 
@@ -20,18 +25,18 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 hbs.registerHelper('ifCond', function (v1, operator, v2, options) {
-    switch (operator) {
-        case '==':
-            return (v1 == v2) ? options.fn(this) : options.inverse(this);
-        default:
-            return options.inverse(this);
-    }
+  switch (operator) {
+    case '==':
+      return (v1 == v2) ? options.fn(this) : options.inverse(this);
+    default:
+      return options.inverse(this);
+  }
 });
 
-hbs.registerHelper('formatDate', function(date) {
-    if (!date) return "";
-    let d = new Date(date);
-    return d.toISOString().split('T')[0];
+hbs.registerHelper('formatDate', function (date) {
+  if (!date) return "";
+  let d = new Date(date);
+  return d.toISOString().split('T')[0];
 });
 
 app.use(logger('dev'));
@@ -63,11 +68,17 @@ secured = async (req, res, next) => {
 }
 //
 
+app.use(fileUpload({
+  useTempFiles: true,
+  tempFileDir: '/tmp/'
+}));
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/novedades', secured, novedadesRouter);
 // app.use('/admin/novedades', novedadesRouter);
+app.use('/api', cors(), apiRouter);
 
 
 // catch 404 and forward to error handler

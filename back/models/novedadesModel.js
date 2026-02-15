@@ -1,7 +1,7 @@
 var pool = require('./bd');
 
 async function getNovedades() {
-    var query = 'select * from novedades';
+    var query = 'select * from novedades order by id desc';
     var rows = await pool.query(query);
     return rows;
 }
@@ -39,6 +39,5 @@ async function updateNovedadById(obj, id) {
         throw error;
     }
 }
-
 
 module.exports = { getNovedades, insertNovedades, deleteNovedadesById, getNovedadesById, updateNovedadById };

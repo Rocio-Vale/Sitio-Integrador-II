@@ -6,8 +6,8 @@
             </div>
         </div>
 
-        <div class="p-4 p-md-5">
-            <form action="/admin/novedades/agregar" method="post" class="row g-4">
+        <div class="p-4 p-md-5 agregar-nov">
+            <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data" class="row g-4">
                 <div class=" d-flex flex-column">
 
                     {{#if error}}
@@ -61,13 +61,19 @@
 
                     <div class="col-12 mb-4">
                         <label class="form-label fw-bold text-dark">Imagen de portada</label>
-                        <div class="input-group">
-                            <span class="input-group-text bg-light border-end-0 contenedor-icono"><i
-                                    class="fas fa-image text-muted"></i></span>
-                            <input type="text" class="form-control border-start-0 ps-0"
-                                placeholder="URL de la imagen - deshabilitado" name="imagen_url" disabled>
+                        <div class="contenedor-img-upload">
+                            <input type="file" name="imagen_url" id="imagen_url" accept="image/*" class="input-oculto">
+                            <label for="imagen_url" class="contenedor-label-upload">
+                                <div class="contenido-upload">
+                                    <span class="texto-upload" id="texto-upload-exito">¡Imagen cargada
+                                        exitosamente!</span>
+                                    <div class="icono-upload">
+                                        <i class="fas fa-cloud-upload-alt"></i>
+                                    </div>
+                                    <span class="texto-upload">Selecciona una imagen o arrástrala aquí</span>
+                                </div>
+                            </label>
                         </div>
-
                     </div>
 
                     <div
@@ -80,8 +86,17 @@
                 </div>
             </form>
 
-
-
         </div>
     </div>
 </div>
+
+<script>
+    const fileInput = document.getElementById('imagen_url');
+    fileInput.addEventListener('change', function () {
+        if (this.files && this.files.length > 0) {
+            this.classList.add('has-file');
+        } else {
+            this.classList.remove('has-file');
+        }
+    });
+</script>
