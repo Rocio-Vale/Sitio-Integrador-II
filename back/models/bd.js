@@ -11,6 +11,8 @@ var pool = mariadb.createPool({
     //despliegue
 
     port: process.env.MARIADB_PORT || 4000,
+    connectTimeout: 10000, 
+    acquireTimeout: 10000,
     ssl: {
         rejectUnauthorized: false // para TiDB Cloud
     }
