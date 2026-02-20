@@ -1,0 +1,19 @@
++ No pude loggearme en Heroku por lo que utilicé para el despliegue del back Render (https://render.com/) y para la base de datos TiDB Cloud (https://tidbcloud.com).
+    -La configuración en Render fue similar a Heroku, con estas variables de entorno: 
+        CLOUDINARY_URL=cloudinary://881186714191918:a_zkQH-mD2jNSUN800Cv5pUFf8s@dwtrqrolv
+        MARIADB_DATABASE=test
+        MARIADB_HOST=gateway01.us-east-1.prod.aws.tidbcloud.com
+        MARIADB_PASSWORD=34Z3UtnXvgasd8fp
+        MARIADB_PORT=4000
+        MARIADB_USER=jaUiGyDiioCf6pg.root
+        SMTP_HOST=sandbox.smtp.mailtrap.io
+        SMTP_PASS=896c57b624cf14
+        SMTP_PORT=2525
+        SMTP_USER=cea23f6c51c74c
+
+    -Para la base de datos en TiDB cree las tablas en el cluster copiando y pegando desde marusst_db.sql con algunas modificaciones del formato.
+        - Por ser un sistema distribuido el "id" que genera al agregar una novedad depende del nodo que atienda el registro desde Render.
+
++ El archivo .env está en el .gitignore para el funcionamiento del proyecto en las plataformas mencionadas. 
+
++ La ruta del despliegue del back es https://sitio-integrador-ii.onrender.com
