@@ -15,7 +15,11 @@ var pool = mariadb.createPool({
     acquireTimeout: 10000,
     ssl: {
         rejectUnauthorized: false // para TiDB Cloud
-    }
+    },
+
+    checkExpirationInterval: 900000, // 15 minutos
+    idleTimeout: 30000, // Cierra conexiones inactivas tras 30s
+    evictionRunIntervalMillis: 15000 // Limpia el pool frecuentemente
 });
 
 module.exports = pool;

@@ -73,13 +73,14 @@ app.use(fileUpload({
   tempFileDir: '/tmp/'
 }));
 
+app.use(cors());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/novedades', secured, novedadesRouter);
 // app.use('/admin/novedades', novedadesRouter);
 // app.use('/api', cors(), apiRouter);
-app.use(cors());
+
 
 
 
