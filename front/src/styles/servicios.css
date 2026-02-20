@@ -3,6 +3,16 @@
     margin: 50px auto;
 }
 
+
+.titulo .subrayado {
+    width: 80px;
+    height: 4px;
+    background-color: #cc7a00;
+    margin: 10px auto 50px auto;
+    border-radius: 2px;
+}
+
+
 .servicios {
     display: flex;
     gap: 5px;

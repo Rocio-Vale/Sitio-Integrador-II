@@ -10,6 +10,7 @@ export default function Nosotros() {
         <main className="holder nos">
             <div className="titulo">
                 <h2>QUIÉNES SOMOS</h2>
+                <div className="subrayado"></div>
                 <img src="img/imagotipo2.png" alt="Marusst" />
                 <p>Soluciones industriales</p>
             </div>

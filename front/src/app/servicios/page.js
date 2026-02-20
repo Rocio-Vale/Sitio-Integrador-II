@@ -10,6 +10,7 @@ export default function Servicios() {
         <main className="holder serv">
             <div className="titulo">
                 <h2>NUESTROS SERVICIOS</h2>
+                <div className="subrayado"></div>
             </div>
             <div className="servicios">
                 <div className="servicio">

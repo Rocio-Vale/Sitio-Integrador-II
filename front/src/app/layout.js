@@ -29,7 +29,9 @@ export default function RootLayout({ children }) {
         {children}
 
         <footer>
-          -- Diseñado por Rocío --
+          <div className="container text-center">
+            <small className="">&copy; MARUSST - Diseñado por Rocío</small>
+        </div>
         </footer>
       </body>
     </html>

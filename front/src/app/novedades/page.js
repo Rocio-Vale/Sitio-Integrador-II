@@ -22,7 +22,7 @@ export default async function Novedades() {
 
     return (
         <main className="holder seccion-novedad">
-            <div className="titulo-novedades">
+            <div className="titulo titulo-novedades">
                 <h2>NOVEDADES</h2>
                 <div className="subrayado"></div>
             </div>

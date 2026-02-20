@@ -9,8 +9,16 @@
     margin: 30px;
 }
 
+.titulo .subrayado {
+    width: 80px;
+    height: 4px;
+    background-color: #cc7a00;
+    margin: 10px auto 50px auto;
+    border-radius: 2px;
+}
+
 .titulo h2 {
-    margin: 50px auto;
+    margin: 50px auto 10px auto;
 }
 
 .nos .titulo p {

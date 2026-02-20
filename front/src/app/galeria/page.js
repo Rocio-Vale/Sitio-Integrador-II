@@ -10,6 +10,7 @@ export default function Galeria() {
         <main className="holder gal">
             <div className="titulo">
                 <h2>NUESTROS TRABAJOS</h2>
+                <div className="subrayado"></div>
             </div>
 
             <div className="galeria">

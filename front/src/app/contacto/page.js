@@ -12,6 +12,7 @@ export default function Contacto() {
 
             <div className="titulo">
                 <h2>CONTACTO</h2>
+                <div className="subrayado"></div>
             </div>
 
             <div className="contacto">

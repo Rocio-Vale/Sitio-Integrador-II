@@ -3,8 +3,22 @@
     margin: 0;
 }
 
-.gal .titulo h3 {
-    margin: 50px auto;
+.titulo {
+    text-align: center;
+    color: #202020;
+    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #555555;
+    margin: 50px auto 10px auto;
+}
+
+.titulo .subrayado {
+    width: 80px;
+    height: 4px;
+    background-color: #cc7a00;
+    margin: 10px auto 50px auto;
+    border-radius: 2px;
 }
 
 .gal .titulo img {
